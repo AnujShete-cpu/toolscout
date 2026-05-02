@@ -1,11 +1,15 @@
 {
   "routes": [
     {
-      "src": "/sitemap.xml",
+      "src": "^/sitemap.xml$",
       "dest": "/sitemap.xml"
     },
     {
-      "src": "/(.*)",
+      "src": "^/robots.txt$",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "^/.*",
       "dest": "/index.html"
     }
   ]
