@@ -1,19 +1,8 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/sitemap.xml$",
-      "dest": "/sitemap.xml"
-    },
-    {
-      "src": "^/robots.txt$",
-      "dest": "/robots.txt"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
+      "source": "/:path((?!assets/.*|sitemap\\.xml$|robots\\.txt$|google38f334eb09be7a1f\\.html$|favicon\\.svg$).*)",
+      "destination": "/index.html"
     }
   ]
 }
