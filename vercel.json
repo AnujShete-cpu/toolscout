@@ -1,7 +1,27 @@
 {
   "rewrites": [
     {
-      "source": "/:path((?!assets/.*|sitemap\\.xml$|robots\\.txt$|google38f334eb09be7a1f\\.html$|favicon\\.svg$).*)",
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/google38f334eb09be7a1f.html",
+      "destination": "/google38f334eb09be7a1f.html"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/favicon.svg",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/:path*",
       "destination": "/index.html"
     }
   ]
