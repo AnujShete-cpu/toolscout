@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toolscout-two.vercel.app/sitemap.xml
+Sitemap: https://toolscout-one.vercel.app/sitemap.xml

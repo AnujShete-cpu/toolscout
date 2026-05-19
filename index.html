@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="toolscout-loading">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -13,9 +13,132 @@
     <meta name="description" content="Find the right AI tool for any problem. Intent-first AI tools directory with 200+ curated tools." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=optional" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=optional" rel="stylesheet" />
+    <style>
+      :root {
+        --loader-black: #0a0a0a;
+        --loader-panel: #111111;
+        --loader-line: rgba(255, 255, 255, .08);
+        --loader-accent: #c8ff00;
+      }
+
+      html,
+      body,
+      #root {
+        min-height: 100%;
+        background: var(--loader-black);
+      }
+
+      body {
+        margin: 0;
+        color: #f5f5f0;
+        overflow-x: hidden;
+      }
+
+      #root {
+        opacity: 0;
+      }
+
+      .ts-initial-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 18% 12%, rgba(200, 255, 0, .045), transparent 28%),
+          linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+        transition: opacity .38s ease, visibility .38s ease;
+      }
+
+      .ts-loader-card {
+        width: min(520px, calc(100vw - 40px));
+        border: 1px solid var(--loader-line);
+        background: rgba(17, 17, 17, .78);
+        padding: 28px;
+      }
+
+      .ts-loader-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 28px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+
+      .ts-loader-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--loader-accent);
+        box-shadow: 0 0 22px rgba(200, 255, 0, .35);
+      }
+
+      .ts-loader-line,
+      .ts-loader-block {
+        background: #181818;
+      }
+
+      .ts-loader-line {
+        height: 12px;
+        margin-bottom: 12px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .025);
+      }
+
+      .ts-loader-line:nth-child(2) { width: 86%; height: 34px; }
+      .ts-loader-line:nth-child(3) { width: 62%; }
+      .ts-loader-line:nth-child(4) { width: 74%; }
+
+      .ts-loader-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        margin-top: 26px;
+        background: var(--loader-line);
+      }
+
+      .ts-loader-block {
+        min-height: 84px;
+        background: var(--loader-panel);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .025);
+      }
+
+      html.app-ready #root {
+        opacity: 1;
+      }
+
+      html.app-ready .ts-initial-loader {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ts-initial-loader {
+          transition: none;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div class="ts-initial-loader" id="initial-loader" aria-hidden="true">
+      <div class="ts-loader-card">
+        <div class="ts-loader-brand"><span class="ts-loader-dot"></span>ToolScout</div>
+        <div class="ts-loader-line"></div>
+        <div class="ts-loader-line"></div>
+        <div class="ts-loader-line"></div>
+        <div class="ts-loader-grid">
+          <div class="ts-loader-block"></div>
+          <div class="ts-loader-block"></div>
+          <div class="ts-loader-block"></div>
+        </div>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
