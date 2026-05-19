@@ -13,6 +13,9 @@ import WordCounter from './pages/WordCounter';
 import ImageCompressor from './pages/ImageCompressor';
 import CodeFormatter from './pages/CodeFormatter';
 import ScrollToTop from './components/ScrollToTop';
+import WordCounter from './pages/WordCounter';
+import ImageCompressor from './pages/ImageCompressor';
+import CodeFormatter from './pages/CodeFormatter';
 
 export default function App() {
   return (
