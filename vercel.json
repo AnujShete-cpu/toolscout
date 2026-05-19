@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/((?!sitemap\\.xml|robots\\.txt|google38f334eb09be7a1f\\.html|favicon\\.ico|favicon-16x16\\.png|favicon-32x32\\.png|favicon-48x48\\.png|apple-touch-icon\\.png|android-chrome-192x192\\.png|android-chrome-512x512\\.png|site\\.webmanifest).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
