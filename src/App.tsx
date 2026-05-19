@@ -9,6 +9,9 @@ import HowItWorks from './pages/HowItWorks';
 import ToolDetail from './pages/ToolDetail';
 import Profile from './pages/Profile';
 import ComingSoon from './pages/ComingSoon';
+import WordCounter from './pages/WordCounter';
+import ImageCompressor from './pages/ImageCompressor';
+import CodeFormatter from './pages/CodeFormatter';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
@@ -25,6 +28,9 @@ export default function App() {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/tool/:id" element={<ToolDetail />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/word-counter" element={<WordCounter />} />
+            <Route path="/image-compressor" element={<ImageCompressor />} />
+            <Route path="/code-formatter" element={<CodeFormatter />} />
             <Route path="/coming-soon" element={<ComingSoon />} />
             <Route path="*" element={<ComingSoon />} />
           </Routes>
