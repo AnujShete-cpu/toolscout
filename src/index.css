@@ -49,22 +49,6 @@
 }
 
 @layer components {
-  .app-frame {
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity .42s ease, transform .42s ease;
-    will-change: opacity, transform;
-  }
-
-  html.app-ready .app-frame {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  html.toolscout-loading {
-    background: var(--black);
-  }
-
   .logo { font-family: var(--syne); font-size: 20px; font-weight: 800; letter-spacing: -.03em; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 10px; text-transform: uppercase; cursor: pointer; }
   .logo-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; flex-shrink: 0; animation: pulse 2s ease-in-out infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(.7); } }
