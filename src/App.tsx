@@ -18,7 +18,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="app-frame min-h-screen flex flex-col relative">
+      <div className="min-h-screen flex flex-col relative">
         <Navbar />
         <main className="flex-grow">
           <Routes>
