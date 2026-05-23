@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useLayoutEffect} from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { TOOLS } from '../constants';
 import { ToolCard } from '../components/ToolCard';
@@ -20,7 +20,7 @@ export default function Browse() {
     if (c !== null) setCatFilter(c);
   }, [searchParams]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
