@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useLayoutEffect} from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { TOOLS } from '../constants';
 import { Tool } from '../types';
@@ -28,7 +28,7 @@ export default function Home() {
     setGlobalReviews(stored.length > 0 ? stored : DEFAULT_REVIEWS);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     loadReviews();
 
     const observer = new IntersectionObserver((entries) => {
