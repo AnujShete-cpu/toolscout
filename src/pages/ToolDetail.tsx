@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useLayoutEffect} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { TOOLS } from '../constants';
 import { Tool, Review } from '../types';
@@ -37,7 +37,7 @@ export default function ToolDetail() {
     }
   }, [id, navigate]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
