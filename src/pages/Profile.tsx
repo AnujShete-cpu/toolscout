@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { TOOLS } from '../constants';
 import { ToolCard } from '../components/ToolCard';
@@ -21,7 +21,7 @@ export default function Profile() {
     return () => window.removeEventListener('show-toast', handleToast);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
