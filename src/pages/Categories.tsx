@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useLayoutEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { TOOLS } from '../constants';
 
 export default function Categories() {
   const revealRefs = useRef<HTMLElement[]>([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
