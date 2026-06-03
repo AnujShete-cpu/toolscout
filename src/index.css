@@ -1549,10 +1549,10 @@
 
   /* --- HERO SECTION --- */
   .hero {
-    padding: 96px 20px 56px;
+    padding: 96px 20px 48px;
     grid-template-columns: 1fr;
     min-height: auto;
-    gap: 40px;
+    gap: 32px;
     align-items: start;
   }
 
@@ -1575,6 +1575,10 @@
 
   .hero-headline .line-outline {
     display: block;
+    font-size: clamp(28px, 7.5vw, 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   .hero-eyebrow {
@@ -1605,12 +1609,12 @@
   .hero-actions .btn-primary {
     justify-content: center;
     width: 100%;
-    padding: 16px 24px;
+    padding: 13px 24px;
   }
 
   .hero-actions .btn-ghost {
     justify-content: center;
-    padding: 14px 0;
+    padding: 11px 0;
     border-bottom: 1px solid var(--white3);
     text-align: center;
   }
@@ -1627,12 +1631,12 @@
 
   .search-box input {
     font-size: 14px;
-    padding: 15px 10px 15px 0;
+    padding: 12px 10px 12px 0;
   }
 
   .search-go {
-    min-height: 50px;
-    padding: 0 18px;
+    min-height: 44px;
+    padding: 0 15px;
     font-size: 11px;
     white-space: nowrap;
     flex-shrink: 0;
@@ -1653,11 +1657,11 @@
   }
 
   .hero-stat {
-    padding: 16px;
+    padding: 14px 16px;
   }
 
   .hero-stat-num {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .hero-stat-label {
@@ -1700,6 +1704,20 @@
     width: 100%;
     justify-content: center;
     padding: 14px 20px;
+    align-self: auto;
+  }
+
+  /* Ensure any self-end wrappers inside section-row also center on mobile */
+  .section-row .self-end {
+    align-self: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-row .self-end .btn-primary {
+    width: auto;
+    min-width: 200px;
   }
 
   /* --- TOOL CARDS --- */
