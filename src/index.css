@@ -1549,19 +1549,19 @@
 
   /* --- HERO SECTION --- */
   .hero {
-    padding: 96px 20px 48px;
+    padding: 82px 20px 28px;
     grid-template-columns: 1fr;
     min-height: auto;
-    gap: 32px;
+    gap: 20px;
     align-items: start;
   }
 
   /* CRITICAL FIX: prevent mid-word line breaks on all headlines */
   .hero-headline {
-    font-size: clamp(36px, 9.5vw, 60px);
+    font-size: clamp(30px, 8vw, 52px);
     line-height: .95;
     letter-spacing: -.03em;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     /* Prevent any word from splitting across lines */
     hyphens: none;
     -webkit-hyphens: none;
@@ -1569,13 +1569,13 @@
   }
 
   .hero-headline .line-accent {
-    font-size: clamp(34px, 9vw, 56px);
+    font-size: clamp(28px, 7.5vw, 48px);
     display: block;
   }
 
   .hero-headline .line-outline {
     display: block;
-    font-size: clamp(28px, 7.5vw, 50px);
+    font-size: clamp(24px, 6.5vw, 42px);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
@@ -1583,7 +1583,7 @@
 
   .hero-eyebrow {
     font-size: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     letter-spacing: .12em;
   }
 
@@ -1592,9 +1592,9 @@
   }
 
   .hero-sub {
-    font-size: 14px;
-    line-height: 1.72;
-    margin-bottom: 28px;
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 16px;
     max-width: 100%;
   }
 
@@ -1602,26 +1602,26 @@
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 7px;
     width: 100%;
   }
 
   .hero-actions .btn-primary {
     justify-content: center;
     width: 100%;
-    padding: 13px 24px;
+    padding: 10px 20px;
   }
 
   .hero-actions .btn-ghost {
     justify-content: center;
-    padding: 11px 0;
+    padding: 9px 0;
     border-bottom: 1px solid var(--white3);
     text-align: center;
   }
 
   /* Hero right panel */
   .hero-right {
-    gap: 14px;
+    gap: 8px;
     align-self: auto;
   }
 
@@ -1630,25 +1630,25 @@
   }
 
   .search-box input {
-    font-size: 14px;
-    padding: 12px 10px 12px 0;
+    font-size: 13px;
+    padding: 9px 10px 9px 0;
   }
 
   .search-go {
-    min-height: 44px;
-    padding: 0 15px;
-    font-size: 11px;
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 10px;
     white-space: nowrap;
     flex-shrink: 0;
   }
 
   .hint-row {
-    gap: 6px;
+    gap: 5px;
   }
 
   .hint {
     font-size: 10px;
-    padding: 5px 10px;
+    padding: 4px 9px;
   }
 
   .hero-stats {
@@ -1657,11 +1657,11 @@
   }
 
   .hero-stat {
-    padding: 14px 16px;
+    padding: 11px 14px;
   }
 
   .hero-stat-num {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .hero-stat-label {
@@ -1707,17 +1707,21 @@
     align-self: auto;
   }
 
-  /* Ensure any self-end wrappers inside section-row also center on mobile */
-  .section-row .self-end {
-    align-self: auto;
+  /* Center the Submit Tool wrapper div only — NOT bare .self-end buttons */
+  .section-row div.self-end {
+    align-self: stretch;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
-  .section-row .self-end .btn-primary {
+  .section-row div.self-end .btn-primary,
+  .section-row div.self-end a.btn-primary {
     width: auto;
     min-width: 200px;
+    max-width: 280px;
+    justify-content: center;
   }
 
   /* --- TOOL CARDS --- */
@@ -2113,14 +2117,14 @@
 
   /* Hero headline — tighter font on very small screens */
   .hero-headline {
-    font-size: clamp(34px, 9.5vw, 48px);
+    font-size: clamp(28px, 8vw, 40px);
     letter-spacing: -.02em;
     hyphens: none;
     -webkit-hyphens: none;
   }
 
   .hero-headline .line-accent {
-    font-size: clamp(32px, 9vw, 46px);
+    font-size: clamp(26px, 7.5vw, 38px);
   }
 
   /* Ensure no single word ever wraps mid-character */
@@ -2134,11 +2138,12 @@
   }
 
   .hero {
-    padding: 88px 16px 48px;
+    padding: 80px 16px 24px;
   }
 
   .hero-sub {
-    font-size: 14px;
+    font-size: 13px;
+    margin-bottom: 14px;
   }
 
   .hero-stat-num {
