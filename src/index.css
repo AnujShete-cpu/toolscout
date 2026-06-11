@@ -1576,9 +1576,9 @@
   .hero-headline .line-outline {
     display: block;
     font-size: clamp(24px, 6.5vw, 42px);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
+    white-space: normal;
+    max-width: 7ch;
+    line-height: .9;
   }
 
   .hero-eyebrow {
@@ -1601,14 +1601,16 @@
   /* Hero actions — stack vertically on small screens */
   .hero-actions {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 7px;
     width: 100%;
   }
 
   .hero-actions .btn-primary {
     justify-content: center;
-    width: 100%;
+    width: auto;
+    min-width: 260px;
+    max-width: 280px;
     padding: 10px 20px;
   }
 
@@ -1627,11 +1629,15 @@
 
   .search-box {
     margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .search-box input {
     font-size: 13px;
     padding: 9px 10px 9px 0;
+    min-width: 0;
   }
 
   .search-go {
@@ -2132,9 +2138,6 @@
   .hero-headline > .line-accent,
   .hero-headline > .line-outline {
     display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
   }
 
   .hero {
