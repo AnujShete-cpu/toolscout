@@ -17,27 +17,27 @@ export default function Footer() {
             <li><Link to="/browse">Browse All</Link></li>
             <li><Link to="/compare">Compare Tools</Link></li>
             <li><Link to="/categories">Categories</Link></li>
-            <li><Link to="/profile">My Saved List</Link></li>
+            <li><Link to="/profile">Profile & Saved</Link></li>
           </ul>
         </div>
         <div>
-          <div className="footer-col-title">For Founders</div>
+          <div className="footer-col-title">Resources</div>
           <ul className="footer-links">
-            <li><Link to="/manage">+ Add Website / Tool</Link></li>
-            <li><Link to="/manage">Manage Catalog</Link></li>
+            <li><Link to="/how-it-works">How It Works</Link></li>
             <li><Link to="/how-it-works">Widget Embedding</Link></li>
+            <li><Link to="/coming-soon">API & Integrations</Link></li>
           </ul>
         </div>
         <div>
           <div className="footer-col-title">Company</div>
           <ul className="footer-links">
-            <li><Link to="/how-it-works">How It Works</Link></li>
+            <li><Link to="/how-it-works">About Us</Link></li>
             <li><Link to="/coming-soon">Contact</Link></li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2026 Toolscout. The Amazon of AI Tools.</p>
+        <p>© 2026 ToolScout. The Intelligent AI Tools Directory.</p>
         <p>
           <Link to="/coming-soon">Privacy</Link> · <Link to="/coming-soon">Terms</Link>
         </p>

@@ -137,14 +137,6 @@ export default function Home() {
             >
               <Layers size={14} className="text-accent" /> Compare Tools
             </button>
-            {isAdmin && (
-              <button
-                onClick={() => setIsAddModalOpen(true)}
-                className="bg-accent text-black font-syne text-xs uppercase font-bold px-5 py-4 transition-all flex items-center gap-2 shadow-lg shadow-accent/10"
-              >
-                <Plus size={15} /> + Add Website
-              </button>
-            )}
           </div>
         </div>
         <div className="hero-right reveal" ref={addToReveal}>

@@ -78,20 +78,9 @@ export default function Browse() {
   return (
     <div className="page active">
       <div className="browse-header">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="section-title-block reveal" ref={addToReveal}>
-            <div className="sec-label">AI Tools Directory ({tools.length} Tools)</div>
-            <h1 className="sec-title">Browse<br /><em>all tools</em></h1>
-          </div>
-
-          {isAdmin && (
-            <button
-              onClick={() => setIsAddModalOpen(true)}
-              className="bg-accent text-black font-syne text-xs uppercase font-bold px-5 py-3 rounded-xl hover:opacity-90 transition-all flex items-center gap-2 shadow-lg shadow-accent/10 self-start md:self-auto cursor-pointer"
-            >
-              <Plus size={16} /> + Add New Website / Tool
-            </button>
-          )}
+        <div className="section-title-block reveal" ref={addToReveal}>
+          <div className="sec-label">AI Tools Directory ({tools.length} Tools)</div>
+          <h1 className="sec-title">Browse<br /><em>all tools</em></h1>
         </div>
 
         <div className="browse-search-wrap reveal mt-8" ref={addToReveal}>
